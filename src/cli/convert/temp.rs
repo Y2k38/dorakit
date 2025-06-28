@@ -39,14 +39,14 @@ impl TempConvertArgs {
                 let mut current = start;
                 while current <= end {
                     let result = convert_temperature(current, from, to);
-                    println!("{:.1}°{} = {:.1}°{}", current, self.from, result, self.to);
+                    println!("{:.2}°{} = {:.2}°{}", current, self.from, result, self.to);
                     current += step;
                 }
             }
 
             (None, Some(val)) => {
                 let result = convert_temperature(val, from, to);
-                println!("{:.1}°{} = {:.1}°{}", val, self.from, result, self.to);
+                println!("{:.2}°{} = {:.2}°{}", val, self.from, result, self.to);
             }
 
             _ => {
