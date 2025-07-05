@@ -9,10 +9,10 @@ pub struct TempConvertArgs {
     #[arg(long)]
     pub to: String,
 
-    #[arg(long)]
+    #[arg(long, allow_hyphen_values = true)]
     pub value: Option<f64>,
 
-    #[arg(long, value_names = ["START", "END"])]
+    #[arg(long, value_names = ["START", "END"], allow_hyphen_values = true)]
     pub range: Option<Vec<f64>>,
 
     #[arg(long)]
